@@ -66,9 +66,10 @@ int main(){
     /*int x1 = 60; //Variavel utilizada para armazenar a chave que buscamos em busca1
     printf("Resultado de busca de %d na lista:%d", x1, busca1(x1)); //Exibimos o resultado da funcao busca1 passando o x1
     */
+
     int x2 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
     printf("Resultado de busca de %d na lista:%d", x2, busca2(x2)); //Exibimos o resultado da funcao busca2 passando o x2
-    printf("\nChave ultima posicao:%d\n", L1[5].chave); //Exibe a ultima posicao do vetor para ver se foi armazenado corretamente
+    //printf("\nChave ultima posicao:%d\n", L1[5].chave); //Exibe a ultima posicao do vetor para ver se foi armazenado corretamente
 
     return 0;
 }
