@@ -16,7 +16,7 @@ No L[6] = {
 int n = 5; 
 
 int buscaOrd(int x){
-    int i = 0, busca;
+    int i = 0;
     L[n].chave = x;
 
     while(L[i].chave < x){
@@ -24,17 +24,15 @@ int buscaOrd(int x){
     }
 
     if(i == n || L[i].chave != x){
-        busca = -1;
+        return -1;
     }else{
-        busca = i;
+        return i;
     }
-
-    return busca;
 }
 
 int main(){
 
-    int x2 = 15; 
+    int x2 = 50; 
     printf("Resultado de busca de %d na lista:%d", x2, buscaOrd(x2)); 
 
     return 0;
