@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct no{ //Struct utilizado para testes de busca
-    int chave;
-    int valor;
-} No;
+#include "alocacao.h"
 
 No L[5] = { //Vetor de struct criado para testar a primeira funcao de busca (busca1)
     {10, 100},
@@ -52,24 +48,4 @@ int busca2(int x){
     }else{
         return -1; //Caso nao seja, a chave nao se encontra no vetor e retornamos -1
     }
-}
-
-int main(){
-
-    /*for(int i = 0; i < 5; i++){
-        printf("L[%d]:\n Chave: %d\n Valor: %d\n",i, L[i].chave, L[i].valor); //For para exibir todo o conteudo do vetor de busca1
-    }*/
-       /*for(int i = 0; i < 5; i++){
-        printf("L1[%d]:\n Chave: %d\n Valor: %d\n",i, L1[i].chave, L1[i].valor); //For para exibir todo o conteudo do vetor de busca2
-    }*/
-
-    /*int x1 = 60; //Variavel utilizada para armazenar a chave que buscamos em busca1
-    printf("Resultado de busca de %d na lista:%d", x1, busca1(x1)); //Exibimos o resultado da funcao busca1 passando o x1
-    */
-
-    int x2 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
-    printf("Resultado de busca de %d na lista:%d", x2, busca2(x2)); //Exibimos o resultado da funcao busca2 passando o x2
-    //printf("\nChave ultima posicao:%d\n", L1[5].chave); //Exibe a ultima posicao do vetor para ver se foi armazenado corretamente
-
-    return 0;
 }

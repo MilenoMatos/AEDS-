@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct no{ //Struct utilizado para testes de busca
-    int chave;
-    int valor;
-} No;
+#include "alocacao.h"
 
 No L[6] = { 
     {10, 100},
@@ -28,12 +24,4 @@ int buscaOrd(int x){
     }else{
         return i;
     }
-}
-
-int main(){
-
-    int x2 = 50; 
-    printf("Resultado de busca de %d na lista:%d", x2, buscaOrd(x2)); 
-
-    return 0;
 }
