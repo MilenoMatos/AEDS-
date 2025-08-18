@@ -15,3 +15,22 @@ int insere(No no){
         return -2; //retorna -2 caso a lista esteja cheia
     }
 }
+
+No *removeLista(int x){
+    No *retorno = NULL; //variavel de retorno começa em null
+    
+    if(m != 0){
+        int indice = busca2(x); //variavel que guarda o indice do item a ser removido
+
+        if(indice != -1){ //se o indice for valido remove
+            retorno = &L[indice]; //salva o endereço do endereço a ser removido da lista
+
+            for(int i = indice; i < m; i++){ //loop para corrigir os valores dentro da lista
+                L[i] = L[i+1]; //salva o proxio valor da lista no valor atual
+            }
+
+            m--; //diminui o tamanho atual da lista
+        }
+    }
+    return retorno; //retorna o endereço do item removido
+}

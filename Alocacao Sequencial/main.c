@@ -35,13 +35,20 @@ int main(){
     //int x4 = 40; 
     //printf("\nResultado de busca de %d na lista:%d\n", x4, buscaBin(x4)); 
 
-    No no;
-    no.chave = 60;
-    no.valor = 105;
+    //No no;
+    //no.chave = 60;
+    //no.valor = 105;
 
-    printf("\nPosicao 6 no vetor antes de inserir: %d\n", L1[5]);
-    printf("\nResultado de insercao do no na lista: %d\n", insere(no));
-    printf("\nPosicao 6 no vetor depois de inserir: %d\n", L1[5]);
+    //printf("\nPosicao 6 no vetor antes de inserir: %d\n", L1[5]);
+    //printf("\nResultado de insercao do no na lista: %d\n", insere(no));
+    //printf("\nPosicao 6 no vetor depois de inserir: %d\n", L1[5]);
+
+
+   // removeLista(20);
+
+   /* for(int i = 0; i < 5; i++){
+        printf("\nPosicao: %d  Chave: %d\n",i,L[i].chave);
+    }*/
 
     return 0;
 }

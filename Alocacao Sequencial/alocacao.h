@@ -17,5 +17,6 @@ int busca2(int x);
 int buscaOrd(int x);
 int buscaBin(int x);
 int insere(No no);
+No *removeLista(int x);
 
 #endif
