@@ -21,6 +21,14 @@ No L1[6] = { //Vetor de struct criado para testar a segunda funcao de busca (bus
 int n2 = 6; //n2 determina o tamanho do vetor de busca2
 int m = 5; //controla o tamanho atual da lista
 
+pilha p[5] = {
+    {10, 100},
+    {20, 101},
+    {30, 102},
+    {40, 103},
+    {50, 104}
+};
+
 int main(){
 
     //int x1 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2

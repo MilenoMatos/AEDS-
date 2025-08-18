@@ -6,8 +6,14 @@ typedef struct no{
     int valor;
 }No;
 
+typedef struct no2{
+    int chave;
+    int valor;
+}pilha;
+
 extern No L[5];
 extern No L1[6];
+extern pilha p[5];
 extern int n;
 extern int n2;
 extern int m;
