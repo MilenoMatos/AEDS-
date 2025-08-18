@@ -18,7 +18,8 @@ No L1[6] = { //Vetor de struct criado para testar a segunda funcao de busca (bus
     {40, 103},
     {50, 104}
 };
-int n2 = 5; //n2 determina o tamanho do vetor de busca2
+int n2 = 6; //n2 determina o tamanho do vetor de busca2
+int m = 5; //controla o tamanho atual da lista
 
 int main(){
 
@@ -33,6 +34,14 @@ int main(){
 
     //int x4 = 40; 
     //printf("\nResultado de busca de %d na lista:%d\n", x4, buscaBin(x4)); 
+
+    No no;
+    no.chave = 60;
+    no.valor = 105;
+
+    printf("\nPosicao 6 no vetor antes de inserir: %d\n", L1[5]);
+    printf("\nResultado de insercao do no na lista: %d\n", insere(no));
+    printf("\nPosicao 6 no vetor depois de inserir: %d\n", L1[5]);
 
     return 0;
 }
