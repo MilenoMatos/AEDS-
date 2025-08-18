@@ -35,7 +35,7 @@ int buscaBin(int x){
 
 int main(){
 
-    int x2 = 9; 
+    int x2 = 40; 
     printf("Resultado de busca de %d na lista:%d", x2, buscaBin(x2)); 
 
     return 0;
