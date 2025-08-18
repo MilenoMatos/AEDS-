@@ -21,13 +21,15 @@ No L1[6] = { //Vetor de struct criado para testar a segunda funcao de busca (bus
 int n2 = 6; //n2 determina o tamanho do vetor de busca2
 int m = 5; //controla o tamanho atual da lista
 
-pilha p[5] = {
+pilha p[6] = {
     {10, 100},
     {20, 101},
     {30, 102},
     {40, 103},
-    {50, 104}
+    {50, 104},
 };
+
+int topo = 4;
 
 int main(){
 
@@ -56,6 +58,32 @@ int main(){
 
    /* for(int i = 0; i < 5; i++){
         printf("\nPosicao: %d  Chave: %d\n",i,L[i].chave);
+    }*/
+
+    //printf("\nAntes de inserir:\n");
+    /*for(int i = 0; i <= topo; i++){
+        printf("\nPosicao: %d  Chave: %d\n",i,p[i].chave);
+    }*/
+
+    //pilha no;
+    //no.chave = 60;
+    //no.valor = 105;
+    //printf("\nValor do topo: %d\n",inserePilha(no));
+
+    //printf("\nDepois de inserir:\n");
+
+    /*
+    printf("\nTopo: %d\n",topo);
+    for(int i = 0; i <= topo; i++){
+        printf("\nPosicao: %d  Chave: %d\n",i,p[i].chave);
+    }*/
+    
+   //removePilha();
+ 
+    /*
+    printf("\nTopo: %d\n",topo);
+    for(int i = 0; i <= topo; i++){
+        printf("\nPosicao: %d  Chave: %d\n",i,p[i].chave);
     }*/
 
     return 0;
