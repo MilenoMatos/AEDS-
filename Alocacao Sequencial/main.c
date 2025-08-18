@@ -44,7 +44,7 @@ int main(){
     //printf("\nPosicao 6 no vetor depois de inserir: %d\n", L1[5]);
 
 
-   // removeLista(20);
+   //removeLista(20);
 
    /* for(int i = 0; i < 5; i++){
         printf("\nPosicao: %d  Chave: %d\n",i,L[i].chave);
