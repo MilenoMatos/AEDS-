@@ -6,6 +6,11 @@ typedef struct no{
     int valor;
 }No;
 
+extern No L[5];
+extern No L1[6];
+extern int n;
+extern int n2;
+
 int busca1(int x);
 int busca2(int x);
 int buscaOrd(int x);

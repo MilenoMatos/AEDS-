@@ -2,15 +2,6 @@
 #include <stdlib.h>
 #include "alocacao.h"
 
-No L[5] = { 
-    {10, 100},
-    {20, 101},
-    {30, 102},
-    {40, 103},
-    {50, 104}
-};
-int n = 5; 
-
 int buscaBin(int x){
     int inf = 0, sup = n-1, busca = -1, meio;
 

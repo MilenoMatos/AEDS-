@@ -2,24 +2,6 @@
 #include <stdlib.h>
 #include "alocacao.h"
 
-No L[5] = { //Vetor de struct criado para testar a primeira funcao de busca (busca1)
-    {10, 100},
-    {20, 101},
-    {30, 102},
-    {40, 103},
-    {50, 104}
-};
-int n = 5; //n determina o tamanho do vetor de busca1
-
-No L1[6] = { //Vetor de struct criado para testar a segunda funcao de busca (busca2)
-    {10, 100},
-    {20, 101},
-    {30, 102},
-    {40, 103},
-    {50, 104}
-};
-int n2 = 5; //n2 determina o tamanho do vetor de busca2
-
 int busca1(int x){
     int i = 0; //Variavel de controle do loop
     int busca = -1; //Variavel de retorno -1 caso nao encontre, caso encontre retorna posicao

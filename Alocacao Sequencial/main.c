@@ -2,19 +2,37 @@
 #include <stdlib.h>
 #include "alocacao.h"
 
+No L[5] = { //Vetor de struct criado para testar a primeira funcao de busca (busca1)
+    {10, 100},
+    {20, 101},
+    {30, 102},
+    {40, 103},
+    {50, 104}
+};
+int n = 5; //n determina o tamanho do vetor de busca1
+
+No L1[6] = { //Vetor de struct criado para testar a segunda funcao de busca (busca2)
+    {10, 100},
+    {20, 101},
+    {30, 102},
+    {40, 103},
+    {50, 104}
+};
+int n2 = 5; //n2 determina o tamanho do vetor de busca2
+
 int main(){
 
-    int x1 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
-    printf("Resultado de busca de %d na lista:%d", x1, busca2(x1)); //Exibimos o resultado da funcao busca2 passando o x2
+    //int x1 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
+    //printf("\nResultado de busca de %d na lista:%d\n", x1, busca2(x1)); //Exibimos o resultado da funcao busca2 passando o x2
 
-    int x2 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
-    printf("Resultado de busca de %d na lista:%d", x2, busca2(x2)); //Exibimos o resultado da funcao busca2 passando o x2
+    //int x2 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
+    //printf("\nResultado de busca de %d na lista:%d\n", x2, busca2(x2)); //Exibimos o resultado da funcao busca2 passando o x2
 
-    int x3 = 50; 
-    printf("Resultado de busca de %d na lista:%d", x3, buscaOrd(x3));
+    //int x3 = 50; 
+    //printf("\nResultado de busca de %d na lista:%d\n", x3, buscaOrd(x3));
 
-    int x4 = 40; 
-    printf("Resultado de busca de %d na lista:%d", x4, buscaBin(x4)); 
+    //int x4 = 40; 
+    //printf("\nResultado de busca de %d na lista:%d\n", x4, buscaBin(x4)); 
 
     return 0;
 }
