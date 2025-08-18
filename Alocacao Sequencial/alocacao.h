@@ -25,7 +25,6 @@ int buscaOrd(int x);
 int buscaBin(int x);
 int insere(No no);
 No *removeLista(int x);
-
 int inserePilha(pilha no);
 pilha *removePilha();
 
