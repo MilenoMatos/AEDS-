@@ -11,13 +11,21 @@ typedef struct no2{
     int valor;
 }pilha;
 
+typedef struct no3{
+    int chave;
+    int valor;
+}fila;
+
 extern No L[5];
 extern No L1[6];
 extern pilha p[6];
+extern fila fi[6];
 extern int n;
 extern int n2;
 extern int m;
 extern int topo;
+extern int f;
+extern int r;
 
 int busca1(int x);
 int busca2(int x);
@@ -27,5 +35,7 @@ int insere(No no);
 No *removeLista(int x);
 int inserePilha(pilha no);
 pilha *removePilha();
+int insereFila(fila no);
+fila *removeFila();
 
 #endif

@@ -31,6 +31,16 @@ pilha p[6] = {
 
 int topo = 4;
 
+fila fi[6] = {
+    {10, 100},
+    {20, 101},
+    {30, 102},
+    {40, 103},
+    {50, 104},
+};
+
+int r = -1, f = -1;
+
 int main(){
 
     //int x1 = 10; //Variavel utilizada para armazenar a chave que buscamos em busca2
@@ -84,6 +94,18 @@ int main(){
     printf("\nTopo: %d\n",topo);
     for(int i = 0; i <= topo; i++){
         printf("\nPosicao: %d  Chave: %d\n",i,p[i].chave);
+    }*/
+
+    /*fila no;
+    no.chave = 60;
+    no.valor = 105;
+
+    insereFila(no);
+
+    removeFila();
+
+    for(int i = 0; i <= m; i++){
+        printf("\nPosicao: %d  Chave: %d\n",i,fi[i].chave);
     }*/
 
     return 0;
