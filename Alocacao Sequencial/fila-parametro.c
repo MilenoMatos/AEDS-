@@ -50,7 +50,7 @@ int main(){
     No no;
     no.chave = 1;
     no.valor = 10;
-    printf("\nResultado de outra insercao: %d",insereFila(no, L, &f, &r, m));
+    printf("\nResultado de insercao: %d",insereFila(no, L, &f, &r, m));
 
     no.chave = 2;
     no.valor = 20;
