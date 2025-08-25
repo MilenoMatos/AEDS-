@@ -68,9 +68,10 @@ void liberaLista(no *ptlista){
        no *aux2 = aux->prox;
         free(aux);
         aux = aux2;
-        printf("\nLimpou\n");
+        printf("\nLimpou no\n");
     }
     free(ptlista);
+    printf("\nLimpou ptlista\n");
 }
 
 no *alocaNo(int x){
@@ -91,6 +92,33 @@ int main(){
 
     no *ptlista = malloc(sizeof(no));
     ptlista->prox = NULL;
+
+    no *no1 = alocaNo(5);
+    no *no2 = alocaNo(10);
+    no *no3 = alocaNo(15);
+    no *no4 = alocaNo(20);
+    no *no5 = alocaNo(30);
+
+    printf("\nResultado de insere lista:%d\n",insereLista(ptlista, no1));
+    printf("\nResultado de insere lista:%d\n",insereLista(ptlista, no2));
+    printf("\nResultado de insere lista:%d\n",insereLista(ptlista, no3));
+    printf("\nResultado de insere lista:%d\n",insereLista(ptlista, no4));
+    printf("\nResultado de insere lista:%d\n",insereLista(ptlista, no5));
+
+    imprimeLista(ptlista);
+
+    printf("\n--------------------\n");
+
+    no *testeRemove = removeLista(ptlista, 30);
+    free(testeRemove);
+
+    imprimeLista(ptlista);
+
+    no *no6 = alocaNo(25);
+    printf("\nResultado de insere lista:%d\n",insereLista(ptlista, no6));
+    imprimeLista(ptlista);
+    
+    liberaLista(ptlista);
 
     return 0;
 }
