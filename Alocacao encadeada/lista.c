@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "alocacao.h"
 
 typedef struct lista{
     int chave;
