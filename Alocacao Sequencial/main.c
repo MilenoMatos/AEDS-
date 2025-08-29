@@ -95,8 +95,8 @@ int main(){
     for(int i = 0; i <= topo; i++){
         printf("\nPosicao: %d  Chave: %d\n",i,p[i].chave);
     }*/
-
-    /*fila no;
+    /*
+    fila no;
     no.chave = 60;
     no.valor = 105;
 
@@ -106,7 +106,8 @@ int main(){
 
     for(int i = 0; i <= m; i++){
         printf("\nPosicao: %d  Chave: %d\n",i,fi[i].chave);
-    }*/
+    }
 
     return 0;
+    */
 }
