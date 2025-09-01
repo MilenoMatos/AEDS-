@@ -68,12 +68,18 @@ int main(){
 
     imprimePilha(topo); //imprime a pilha
 
-    removePilha(&topo); //remove 2 nos para teste
-    removePilha(&topo);
+    no *noRemovido1 = removePilha(&topo); //remove 2 nos para teste
+    no *noRemovido2 = removePilha(&topo);
 
     imprimePilha(topo); //imprime para visualizar remocao
 
-    limpaPilha(&topo); //limpa a pilha da memoria
+    limpaPilha(&topo); //limpa a pilha da memoria e os elementos removidos também
+    free(noRemovido1);
+    free(noRemovido2);
+    
+    if(topo == NULL){ //testa se o topo de fato ficou nulo apos remover todo elementos da pilha
+        printf("\nTopo NULL\n");
+    }
 
     return 0;
 }
