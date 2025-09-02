@@ -6,7 +6,7 @@ typedef struct lista{
     int valor;
     struct lista *prox;
 }no;
-
+//teste
 void buscaLista(no *ptlista, int x, no **ant, no **pont){ //procedimento para apontar os ponteiros para posicao de insercao e remocao corretamente
     no *ptr = ptlista->prox; //ponteiro que que fica a frente no loop
     *ant = ptlista; //ponteiro que marca elemento anterior ao buscado na lista
