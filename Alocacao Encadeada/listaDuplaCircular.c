@@ -33,14 +33,7 @@ int insereLista(no *ptlista, no *novoNo){
 
     buscaLista(ptlista, &ant, &pont, novoNo->chave); //chama funcao de busca para posicionar os ponteiros
 
-    if(ptlista->prox == ptlista){ //caso o elemento a inserir seja o primeiro preciso inserir diferente
-        ptlista->prox = novoNo; //ponteiros de ptlista aponta pro primeiro elemento
-        ptlista->ant = novoNo;
-        novoNo->prox = ptlista; //ponteiros do novoNo aponta pro ptlista
-        novoNo->ant = ptlista;
-
-        return 0; //retorna 0 para confirmar insercao
-    }else if(pont == NULL){ //caso o no a inserir nao for encontrado posso inserir ele
+    if(pont == NULL){ //caso o no a inserir nao for encontrado posso inserir ele
         ant->prox->ant = novoNo; //o no de ant aponta corretamente
         novoNo->prox = ant->prox; //o no a inserir aponta pro proximo do ant
         novoNo->ant = ant; //o ant do do a inserir aponta pro ant
@@ -57,9 +50,7 @@ no *removeLista(no *ptlista, int x){
     no *retorno = NULL;
     buscaLista(ptlista, &ant, &pont, x); //aponta os ponteiros corretamente
 
-    if(ptlista->prox == ptlista){ //se a lista esta vazia retorno NULL
-        return retorno;
-    }else if(pont != NULL){ //se o pont encontrou oq remover
+    if(pont != NULL){ //se o pont encontrou oq remover
         retorno = pont; //guardo o no removido na varaivel de retorno
         ant->prox = pont->prox; //atualizo o ponteiro do anterior pro proximo do no removido
         pont->prox->ant = ant; //atualiza o ponteiro do anterior do proximo elemento do no removido para o ant
