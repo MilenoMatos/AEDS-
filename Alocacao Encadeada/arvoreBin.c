@@ -24,15 +24,15 @@ no *alocaNo(int x){
     return raiz; //retorna a raiz criada
 }
 
-no *insere(no *raiz, int chave){
+no *insereArvore(no *raiz, int chave){
     if(raiz == NULL){ //se a raiz for nula eu insiro na posicao
         return alocaNo(chave);
     }
 
     if(chave < raiz->chave){ //se a chave for menor ando pela esquerda
-        raiz->esq = insere(raiz->esq, chave);
+        raiz->esq = insereArvore(raiz->esq, chave);
     }else if(chave > raiz->chave){ //se a chave for maior anda pela direita
-        raiz->dir = insere(raiz->dir, chave);
+        raiz->dir = insereArvore(raiz->dir, chave);
     }else{ //se nao for maior ou menor a chave ja existe na arvore
         printf("\nChave ja existente na arvore",chave);
     }
@@ -40,9 +40,14 @@ no *insere(no *raiz, int chave){
     return raiz; //retorna a propria raiz
 }
 
+void visita(no *raiz){
+    printf("\nChave: %d limpa da memoria\n",raiz->chave);
+    free(raiz);
+}
+
 void preOrdem(no *raiz){ //imprime a arvore em pre ordem
     if(raiz != NULL){
-        printf("\nChave: %d\n",raiz->chave);
+        printf("\nChave: %d limpa da memoria\n",raiz->chave);
         preOrdem(raiz->esq);
         preOrdem(raiz->dir);
     }
@@ -51,7 +56,7 @@ void preOrdem(no *raiz){ //imprime a arvore em pre ordem
 void emOrdem(no *raiz){ //imprime a arvora em ordem
     if(raiz != NULL){
         emOrdem(raiz->esq);
-        printf("\nChave: %d\n",raiz->chave);
+        printf("\nChave: %d limpa da memoria\n",raiz->chave);
         emOrdem(raiz->dir);
     }
 }
@@ -60,12 +65,31 @@ void posOrdem(no *raiz){ //imprime a arvore em pos ordem
     if(raiz != NULL){
         posOrdem(raiz->esq);
         posOrdem(raiz->dir);
-        printf("\nChave: %d\n",raiz->chave);
+        visita(raiz);
     }
 }
 
 int main(){
     no *raiz = NULL;
+
+    raiz = insereArvore(raiz, 30);
+    raiz = insereArvore(raiz, 25);
+    raiz = insereArvore(raiz, 35);
+    raiz = insereArvore(raiz, 24);
+    raiz = insereArvore(raiz, 27);
+    raiz = insereArvore(raiz, 34);
+    raiz = insereArvore(raiz, 38);
+
+    printf("\nPre ordem:\n");
+    preOrdem(raiz);
+
+    printf("\nEm ordem:\n");
+    emOrdem(raiz);
+
+    printf("\nPos ordem:\n");
+    posOrdem(raiz);
+
+    raiz = NULL;
 
     return 0;
 }
