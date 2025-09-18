@@ -8,6 +8,37 @@ typedef struct arvore{
     struct arvore *esq;
 }no;
 
+no *buscaPai(no *raiz, int x){
+    if(raiz == NULL || raiz->chave == x){
+        return NULL;
+    }
+
+    if(raiz->esq != NULL && raiz->esq->chave == x){
+        return raiz;
+    }
+    if(raiz->dir != NULL && raiz->dir->chave == x){
+        return raiz;
+    }
+    
+    if(raiz->esq != NULL && x < raiz->chave){
+        return buscaPai(raiz->esq, x);
+    }else{
+        return buscaPai(raiz->dir, x);
+    }
+}
+
+no *buscaArvore(no *raiz, int x){
+    if(raiz == NULL || raiz->chave == x){
+        return raiz;
+    }
+
+    if(x < raiz->chave){
+        return buscaArvore(raiz->esq, x);
+    }else{
+        return buscaArvore(raiz->dir, x);
+    }
+}
+
 no *alocaNo(int x){
     no *raiz = malloc(sizeof(no)); //aloca um no da raiz
 
