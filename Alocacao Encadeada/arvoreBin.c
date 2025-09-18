@@ -8,6 +8,34 @@ typedef struct arvore{
     struct arvore *esq;
 }no;
 
+no *removeRaiz(no *raiz){
+    if(raiz->dir == NULL && raiz->esq == NULL){
+        return NULL;
+    }else if(raiz->esq == NULL){
+        return raiz->dir;
+    }else if(raiz->dir == NULL){
+        return raiz->esq;
+    }else{
+         no *aux = raiz->esq;
+         no *aux2 = NULL;
+
+         while(aux->dir != NULL){
+            aux2 = aux;
+            aux = aux->dir;
+         }
+
+        if(aux2 != NULL){
+            aux2->dir = aux->esq;
+        }
+        
+        aux->dir = raiz->dir;
+        aux->esq = raiz->esq;
+
+        free(raiz);
+        return aux;
+    }
+}
+ 
 no *removeNo(no *raiz, int x){ ///PSEUDO CODIGO SEM SOLUCAO AINDA
     no *n = buscaArvore(raiz,x);
     if(n){
@@ -22,6 +50,7 @@ no *removeNo(no *raiz, int x){ ///PSEUDO CODIGO SEM SOLUCAO AINDA
             raiz = removeRaiz(n);
         }
     }
+    return raiz;
 }
 
 no *buscaPai(no *raiz, no *n){
