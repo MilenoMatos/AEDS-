@@ -8,49 +8,16 @@ typedef struct arvore{
     struct arvore *esq;
 }no;
 
-no *removeRaiz(no *raiz){
-    if(raiz->dir == NULL && raiz->esq == NULL){
-        return NULL;
-    }else if(raiz->esq == NULL){
-        return raiz->dir;
-    }else if(raiz->dir == NULL){
-        return raiz->esq;
+no *buscaArvore(no *raiz, int x){
+    if(raiz == NULL || raiz->chave == x){
+        return raiz;
+    }
+
+    if(x < raiz->chave){
+        return buscaArvore(raiz->esq, x);
     }else{
-         no *aux = raiz->esq;
-         no *aux2 = NULL;
-
-         while(aux->dir != NULL){
-            aux2 = aux;
-            aux = aux->dir;
-         }
-
-        if(aux2 != NULL){
-            aux2->dir = aux->esq;
-        }
-        
-        aux->dir = raiz->dir;
-        aux->esq = raiz->esq;
-
-        free(raiz);
-        return aux;
+        return buscaArvore(raiz->dir, x);
     }
-}
- 
-no *removeNo(no *raiz, int x){ ///PSEUDO CODIGO SEM SOLUCAO AINDA
-    no *n = buscaArvore(raiz,x);
-    if(n){
-        no *pai = buscaPai(raiz, n->chave);
-        if(pai){
-            if(pai->dir == n){
-                pai->dir = removeRaiz(n);
-            }else{
-                pai->esq = removeRaiz(n);
-            }
-        }else{
-            raiz = removeRaiz(n);
-        }
-    }
-    return raiz;
 }
 
 no *buscaPai(no *raiz, no *n){
@@ -72,16 +39,49 @@ no *buscaPai(no *raiz, no *n){
     }
 }
 
-no *buscaArvore(no *raiz, int x){
-    if(raiz == NULL || raiz->chave == x){
-        return raiz;
-    }
-
-    if(x < raiz->chave){
-        return buscaArvore(raiz->esq, x);
+no *removeRaiz(no *raiz){
+    if(raiz->dir == NULL && raiz->esq == NULL){
+        return NULL;
+    }else if(raiz->esq == NULL){
+        return raiz->dir;
+    }else if(raiz->dir == NULL){
+        return raiz->esq;
     }else{
-        return buscaArvore(raiz->dir, x);
+         no *aux = raiz->esq;
+         no *aux2 = NULL;
+
+         while(aux->dir != NULL){
+            aux2 = aux;
+            aux = aux->dir;
+         }
+
+        if(aux2 != NULL){
+            aux2->dir = aux->esq;
+        }
+
+        aux->dir = raiz->dir;
+        aux->esq = raiz->esq;
+
+        free(raiz);
+        return aux;
     }
+}
+
+no *removeNo(no *raiz, int x){ ///PSEUDO CODIGO SEM SOLUCAO AINDA
+    no *n = buscaArvore(raiz,x);
+    if(n){
+        no *pai = buscaPai(raiz, n);
+        if(pai){
+            if(pai->dir == n){
+                pai->dir = removeRaiz(n);
+            }else{
+                pai->esq = removeRaiz(n);
+            }
+        }else{
+            raiz = removeRaiz(n);
+        }
+    }
+    return raiz;
 }
 
 no *alocaNo(int x){
